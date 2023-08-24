@@ -3,9 +3,9 @@
 
 
 
-
-
-
+"use strict"
+/*Crear una web con un reloj que muestre la siguiente información:
+ */
 const dias = ['Domingo', 'Lunes', 'Martes', 'Miercoles', 'Jueves', 'Viernes']
 const meses = ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre']
 
