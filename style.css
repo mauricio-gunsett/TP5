@@ -21,13 +21,11 @@ li{
     margin-left: 10px;
 }
 
-li button{
-    margin-left: 10px;
-    border: 1px solid;
-    border-radius: 0.375rem;
-    background-color: red;
-    padding: 0.75rem, 0.375rem;
-    width: 2.5rem;
-    
+li p {
+    margin-top: 15px;
+    margin-bottom: 1rem;
+
 }
+
+
 

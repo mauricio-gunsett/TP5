@@ -25,10 +25,12 @@ agregar.addEventListener("click", (e)=>{
  function agregarEliminar(){
     const btnEliminar = document.createElement("button");
     btnEliminar.textContent ="X";
-    
+    btnEliminar.classList.add("btn", "btn-danger");
     btnEliminar.addEventListener("click", (e)=>{
         const item = e.target.parentElement;
         lista.removeChild(item);
     })
     return btnEliminar;
  }
+
+ 
