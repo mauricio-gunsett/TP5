@@ -109,7 +109,7 @@ form.addEventListener("submit", (e)=>{
         validateEdad(edad, inputEdad) && 
         validateDni(dni, inputDni) && 
         validateName(sexo, inputNombre) &&
-        validateEdad(edad, inputEdad) &&
+        
         validateEdad(peso, inputPeso) &&
         validateEdad(altura, inputAltura) &&
         validateAño(fechaDeNacimiento, inputAñoDeNacimiento)
@@ -119,10 +119,9 @@ form.addEventListener("submit", (e)=>{
         const nuevaPersona = new Persona(nombre, edad, dni, sexo, edad, peso, altura, fechaDeNacimiento);
         console.log("Persona creada")
         console.log(nuevaPersona)
-        nuevaPersona.mostrarGeneracion();
-        nuevaPersona.esMayorDeEdad();
-        nuevaPersona.mostrarDatos();
-        // guardar el contacto ---JSON & localStorage
+        
+       document.getElementById("nuevaPers").innerText =  `Nueva persona: Nonbre: ${nombre}, Edad: ${edad}, DNI: ${dni}, Sexo: ${sexo}, Peso: ${peso}, Altura: ${altura}, Fecha de Nacimiento: ${fechaDeNacimiento}`
+        
     }
     });
 
