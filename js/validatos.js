@@ -1,3 +1,7 @@
+
+
+// -----------------
+
 export const validateName = (value,campo) => {
     // Minima longitud del nombre
     if(value.trim().length <=2 ){
@@ -16,82 +20,11 @@ export const validateName = (value,campo) => {
     campo.classList.add("is-valid");
     return true;
 };
-export const validateNumber = (value, campo) => {
-    // Cantidad de digitos distinta a 10 caracteres
-    if(value.trim().length !==10 ){
-        campo.classList.add("is-invalid");
-        campo.classList.remove("is-valid");
-        return false;
-    }
-    // No tenga caracteres no numericos
-    if(isNaN(Number(value, campo))){
-        campo.classList.add("is-invalid");
-        campo.classList.remove("is-valid");
-        return false;
-    }
-    campo.classList.remove("is-invalid");
-    campo.classList.add("is-valid");
-    return true;
-};
 
-export const validateEmail = (value, campo) => {
-    // Cantidad de digitos menor a 4
-    if(value.trim().length < 4 ){
-        campo.classList.add("is-invalid");
-        campo.classList.remove("is-valid");
-        return false;
-    }
-    // Cantidad de digitos mayor a 100
-    if(value.trim().length > 100 ){
-        campo.classList.add("is-invalid");
-        campo.classList.remove("is-valid");
-        return false;
-    }
-    // Validar formato del correo
-    const regex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-
-    if(!regex.test(value, campo)){
-        campo.classList.add("is-invalid");
-        campo.classList.remove("is-valid");
-        return false;
-    }
-    campo.classList.remove("is-invalid");
-    campo.classList.add("is-valid");
-    return true;
-};
-
-export const validateImage = (value, campo) => {
-    // Cantidad de digitos menor a 4
-    if(value.trim().length < 4 ){
-        campo.classList.add("is-invalid");
-        campo.classList.remove("is-valid");
-        return false;
-    }
-    // Cantidad de digitos mayor a 100
-    if(value.trim().length > 300 ){
-        campo.classList.add("is-invalid");
-        campo.classList.remove("is-valid");
-        return false;
-    }
-    // Validar formato del correo
-    const regex = /^(https?|ftp):\/\/[^\s/$.?#].[^\s]*$/;
-
-    if(!regex.test(value, campo)){
-        campo.classList.add("is-invalid");
-        campo.classList.remove("is-valid");
-        return false;
-    }
-    campo.classList.remove("is-invalid");
-    campo.classList.add("is-valid");
-    return true;
-};
-
-
-// -----------------
 
 export const validateEdad = (value, campo) => {
     // Cantidad de digitos distinta a 10 caracteres
-    if(value.trim().length < 2 || value.trim().length > 10  ){
+    if(value.trim().length !==2 ){
         campo.classList.add("is-invalid");
         campo.classList.remove("is-valid");
         return false;
@@ -126,9 +59,40 @@ export const validateDni = (value, campo) => {
     return true;
 };
 
-
-
-
+export const validatePeso = (value, campo) => {
+    // Cantidad de digitos distinta a 10 caracteres
+    if(value.trim().length !==2 ){
+        campo.classList.add("is-invalid");
+        campo.classList.remove("is-valid");
+        return false;
+    }
+    // No tenga caracteres no numericos
+    if(isNaN(Number(value, campo))){
+        campo.classList.add("is-invalid");
+        campo.classList.remove("is-valid");
+        return false;
+    }
+    campo.classList.remove("is-invalid");
+    campo.classList.add("is-valid");
+    return true;
+};
+export const validateAltura = (value, campo) => {
+    // Cantidad de digitos distinta a 10 caracteres
+    if(value.trim().length !==3 ){
+        campo.classList.add("is-invalid");
+        campo.classList.remove("is-valid");
+        return false;
+    }
+    // No tenga caracteres no numericos
+    if(isNaN(Number(value, campo))){
+        campo.classList.add("is-invalid");
+        campo.classList.remove("is-valid");
+        return false;
+    }
+    campo.classList.remove("is-invalid");
+    campo.classList.add("is-valid");
+    return true;
+};
 export const validateAño = (value, campo) => {
     if(value.trim().length < 1 || value.trim().length > 4  ){
         campo.classList.add("is-invalid");

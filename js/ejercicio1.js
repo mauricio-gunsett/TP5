@@ -34,5 +34,8 @@ if(numeroMaginco>valorUsuario){
 
 
 
+button.addEventListener("click", (e) => {
+    e.preventDefault(); 
+    adivinarNumero(); 
+  });
 
-button.addEventListener("click", adivinarNumero);

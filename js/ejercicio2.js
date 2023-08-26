@@ -1,7 +1,7 @@
 "use strict"
 
 import { Persona } from "./Persona.js";
-import { validateAño, validateDni, validateEdad, validateName, validateNumber } from "./validatos.js";
+import { validateAltura, validateAño, validateDni, validateEdad, validateName, validatePeso } from "./validatos.js";
 
 /*Crea una clase llamada Persona que siga las siguientes condiciones:
 Sus propiedades son: nombre, edad, DNI, sexo (H hombre, M mujer), peso y altura, año de nacimiento. 
@@ -63,18 +63,11 @@ inputDni.addEventListener("blur", (e)=>{
         dni = value;
     } 
 });
-inputSexo.addEventListener("blur", (e)=>{
-    const value = e.target.value;
 
-    if(validateName(value, inputSexo)) {
-        
-        sexo = value;
-    } 
-});
 inputPeso.addEventListener("blur", (e)=>{
     const value = e.target.value;
 
-    if(validateEdad(value, inputPeso)) {
+    if(validatePeso(value, inputPeso)) {
         
         peso = value;
     } 
@@ -82,7 +75,7 @@ inputPeso.addEventListener("blur", (e)=>{
 inputAltura.addEventListener("blur", (e)=>{
     const value = e.target.value;
 
-    if(validateEdad(value, inputAltura)) {
+    if(validateAltura(value, inputAltura)) {
         
         altura = value;
     } 
@@ -90,7 +83,7 @@ inputAltura.addEventListener("blur", (e)=>{
 inputAñoDeNacimiento.addEventListener("blur", (e)=>{
     const value = e.target.value;
 
-    if(validateEdad(value, inputAñoDeNacimiento)) {
+    if(validateAño(value, inputAñoDeNacimiento)) {
         
         fechaDeNacimiento = value;
     } 
@@ -108,10 +101,8 @@ form.addEventListener("submit", (e)=>{
         validateName(nombre, inputNombre) && 
         validateEdad(edad, inputEdad) && 
         validateDni(dni, inputDni) && 
-        validateName(sexo, inputNombre) &&
-        
-        validateEdad(peso, inputPeso) &&
-        validateEdad(altura, inputAltura) &&
+        validatePeso(peso, inputPeso) &&
+        validateAltura(altura, inputAltura) &&
         validateAño(fechaDeNacimiento, inputAñoDeNacimiento)
         ) {
         //  ENTRE SOLAMENTE SI TODAS LAS VALIDACIONES SON VALIDAS
@@ -121,8 +112,23 @@ form.addEventListener("submit", (e)=>{
         console.log(nuevaPersona)
         
        document.getElementById("nuevaPers").innerText =  `Nueva persona: Nonbre: ${nombre}, Edad: ${edad}, DNI: ${dni}, Sexo: ${sexo}, Peso: ${peso}, Altura: ${altura}, Fecha de Nacimiento: ${fechaDeNacimiento}`
-        
+       form.reset();
+       nombre = "";
+        edad = "";
+        dni = "";
+        sexo = "";
+        peso = "";
+        altura = "";
+        fechaDeNacimiento = "";
     }
     });
 
   
+
+
+
+
+
+
+
+
